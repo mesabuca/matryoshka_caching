@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @author.name %>
+</p>
+
+<p>
+  <strong>Bio:</strong>
+  <%= @author.bio %>
+</p>
+
+<%= link_to 'Edit', edit_author_path(@author) %> |
+<%= link_to 'Back', authors_path %>
+
+<br>
+<h3>Books</h3>
+
+<%= render partial: 'books/book', collection: @author.books %>

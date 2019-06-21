@@ -1,0 +1,7 @@
+<hr>
+<h3><%= author.name %></h3>
+<br>
+<%= link_to 'Add Book', new_author_book_path(author) %>
+<br>
+<h4>Books (<%= author.books.count %>)</h4>
+<%= render partial: 'books/book', collection: author.books %>
